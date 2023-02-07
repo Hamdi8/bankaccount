@@ -34,16 +34,16 @@ Un autre élément important est que les ports (d’entrée ou de sortie) sont d
 Le service assure la liaison de toutes les pièces ensemble. Par exemple ,dans les deux opérations (dépot et retrait), le service permet d'utiliser le port 'Load' pour extraire les données de Database , puis modifier les données de l'objet et enfin enregistrer la modification.
 
 #### Adaptaters: 
-Pour continuer l'application, on doit utiliser les ports définies.
+Dans l'architecture hexagonale, les adaptateurs utilisent les ports définis dans l'application core. Les adaptateurs implementés dans ce projet sont:
 
  - Web:
-Pour les interations entrantes de User-Side , on crée un REST Controller.
+Pour les interations entrantes par le User-Side , on crée un REST Controller.
  
  - Persistence:
 Pour la couche de persistance, j'ai utilisé MongoDB via Spring Data. De plus, j'ai crée une classe BankAccountRepository qui connecte les outgoing ports avec SpringDataBankAccountRepository
  
  - Infrastructure: 
- Enfin, nous devons dire à Spring d'exposer le BankAccountService en tant que bean, afin qu'il puisse être injecté dans le contrôleur.
+ Enfin, on doit dire à Spring d'exposer le BankAccountService en tant que bean, afin qu'il puisse être injecté dans le contrôleur.
  La définition des beans dans la couche Adapters aide à maintenir le code d'infrastructure découplé de la logique métier (Business Logic).
  
 
