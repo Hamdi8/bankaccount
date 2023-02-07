@@ -19,6 +19,7 @@ L’architecture hexagonale s’appuie sur trois principes et techniques :
   - Séparer explicitement User-Side, Business Logic et Server-Side
   - Les dépendances vont vers la Business Logic
   - On isole les frontières par des Ports et Adapters
+  
 Le projet est divisé sur deux parties principales:
 #### Application Core:
  - Domain:
