@@ -1,6 +1,6 @@
 # BankAccount KATA
 Ce projet a été développé en spring boot avec l'architecture hexagonale.
-ce projet expose un API REST de quelques cas d'utilisation d'une application bancaire.
+ce projet expose un API REST de quelques cas d'utilisation d'une application bancaire avec quelques méthodes des tests unitaires avec JUnit.
 ## les endpoints : 
 #### POST "account/{balance}/{username}"
 création d'un compte pour l'utilisateur {username} et avec un solde {balance}.
